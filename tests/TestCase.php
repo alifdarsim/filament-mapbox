@@ -2,9 +2,9 @@
 
 namespace AlifDarsim\FilamentMapbox\Tests;
 
+use AlifDarsim\FilamentMapbox\FilamentMapboxServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AlifDarsim\FilamentMapbox\FilamentMapboxServiceProvider;
 
 class TestCase extends Orchestra
 {
