@@ -2,13 +2,11 @@
 
 namespace AlifDarsim\FilamentMapbox\Infolists\Components;
 
-use AlifDarsim\FilamentMapbox\Infolists\Traits;
 use Closure;
 use Filament\Infolists\Components\Entry;
 
 class MapEntry extends Entry
 {
-    use Traits\HasStyle;
 
     protected string $view = 'filament-mapbox::filament-mapbox-infolist';
 

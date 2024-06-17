@@ -23,7 +23,7 @@
     >
         <div x-ref="map"
              class="rounded-xl h-full"
-             style="height: {{$getHeight()}}"/> calc(100vh - 350px)">
+             style="height: {{$getHeight()}}"/>
     </div>
 
 
