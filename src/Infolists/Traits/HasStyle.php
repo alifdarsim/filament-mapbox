@@ -10,8 +10,11 @@ trait HasStyle
 
     public function cornerRadius(Closure|string|int $radius): static
     {
-        if (is_int($radius)) $radius = "{$radius}px";
+        if (is_int($radius)) {
+            $radius = "{$radius}px";
+        }
         $this->radius = $radius;
+
         return $this;
     }
 
