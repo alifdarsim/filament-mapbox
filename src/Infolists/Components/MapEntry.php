@@ -7,7 +7,6 @@ use Filament\Infolists\Components\Entry;
 
 class MapEntry extends Entry
 {
-
     protected string $view = 'filament-mapbox::filament-mapbox-infolist';
 
     protected Closure|string $style = 'mapbox://styles/mapbox/streets-v12';
