@@ -2,14 +2,13 @@
 
 namespace AlifDarsim\FilamentMapbox;
 
-use Filament\Support\Assets\AlpineComponent;
+use AlifDarsim\FilamentMapbox\Commands\FilamentMapboxCommand;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use AlifDarsim\FilamentMapbox\Commands\FilamentMapboxCommand;
 
 class FilamentMapboxServiceProvider extends PackageServiceProvider
 {
@@ -24,8 +23,8 @@ class FilamentMapboxServiceProvider extends PackageServiceProvider
             ->name('filament-mapbox')
 //            ->hasConfigFile()
             ->hasViews();
-//            ->hasMigration('create_filament-mapbox_table')
-//            ->hasCommand(FilamentMapboxCommand::class);
+        //            ->hasMigration('create_filament-mapbox_table')
+        //            ->hasCommand(FilamentMapboxCommand::class);
     }
 
     public function packageBooted(): void
@@ -48,9 +47,9 @@ class FilamentMapboxServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-mapbox-css', __DIR__ . '/../resources/dist/mapbox_v3.4.0.css'),
-            Js::make('filament-mapbox-js', __DIR__ . '/../resources/dist/mapbox_v3.4.0.js'),
-            Js::make('filament-mapbox-scripts', __DIR__ . '/../resources/dist/scripts.js'),
+            Css::make('filament-mapbox-css', __DIR__.'/../resources/dist/mapbox_v3.4.0.css'),
+            Js::make('filament-mapbox-js', __DIR__.'/../resources/dist/mapbox_v3.4.0.js'),
+            Js::make('filament-mapbox-scripts', __DIR__.'/../resources/dist/scripts.js'),
         ];
     }
 }
