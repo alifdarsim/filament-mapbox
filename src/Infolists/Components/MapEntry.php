@@ -182,8 +182,8 @@ class MapEntry extends Entry
         try{
             throw new \Exception('Data type must be either point, line or polygon');
         }
-        catch (\Exception $e) {
-            return $e->getMessage();
+        catch (\Exception) {
+            return $this;
         }
     }
 
