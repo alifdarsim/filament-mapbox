@@ -4,13 +4,10 @@ namespace AlifDarsim\FilamentMapbox\Infolists\Components;
 
 use Closure;
 use Filament\Infolists\Components\Entry;
-use phpDocumentor\Reflection\Types\Nullable;
-
 
 class MapEntry extends Entry
 {
-
-//    use Traits\DetectFormat;
+    //    use Traits\DetectFormat;
 
     protected string $view = 'filament-mapbox::filament-mapbox-infolist';
 
@@ -29,14 +26,18 @@ class MapEntry extends Entry
     protected Closure|bool $antialias = false;
 
     protected Closure|bool $addNavigationControl = false;
+
     protected Closure|bool $addFullscreenControl = false;
+
     protected Closure|bool $isGeoJson = false;
+
     protected Closure|array $markers = [];
+
     protected Closure|string $lightPreset = '';
+
     protected Closure|string $markerUrl = 'https://raw.githubusercontent.com/alifdarsim/filament-mapbox/main/resources/dist/marker/pin-m%2B3bb2d0.png';
 
     protected Closure|string $dataType = 'point';
-
 
     public function style(Closure|string $style): static
     {
@@ -69,14 +70,14 @@ class MapEntry extends Entry
         return $this->height;
     }
 
-    public function center(Closure|array|null $center = [0,0]): static
+    public function center(Closure|array|null $center = [0, 0]): static
     {
         $this->center = $center;
 
         return $this;
     }
 
-    public function getCenter(): array|null
+    public function getCenter(): ?array
     {
         return $this->center;
     }
@@ -133,6 +134,7 @@ class MapEntry extends Entry
     {
         $this->addNavigationControl = $navigation;
         $this->addFullscreenControl = $fullScreen;
+
         return $this;
     }
 
@@ -179,10 +181,9 @@ class MapEntry extends Entry
             return $this;
         }
 
-        try{
+        try {
             throw new \Exception('Data type must be either point, line or polygon');
-        }
-        catch (\Exception) {
+        } catch (\Exception) {
             return $this;
         }
     }

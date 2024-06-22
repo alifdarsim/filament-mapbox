@@ -2,6 +2,4 @@
 
 namespace AlifDarsim\FilamentMapbox;
 
-class FilamentMapbox
-{
-}
+class FilamentMapbox {}
